@@ -17,8 +17,11 @@
 //     =====`-.____`.___ \_____/___.-`___.-'=====
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const nodemon = require('nodemon');
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const node = require('node')
+const apiKey = process.env.REACT_APP_API_KEY; // Se usara apiKey en el codigo para hacer solicitudes a la api
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
