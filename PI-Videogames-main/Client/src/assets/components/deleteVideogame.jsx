@@ -36,4 +36,3 @@ const DeleteVideogame = () => {
 };
 
 export default DeleteVideogame;
-la 

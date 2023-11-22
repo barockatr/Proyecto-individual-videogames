@@ -18,15 +18,25 @@
 //                       `=---='
 //     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 const nodemon = require('nodemon');
-const server = require('./src/app.js');
-const { conn } = require('./src/db.js');
+const server = require('./app.js');
+const { conn } = require('./db.js');
+const { Router } = require('express');
+const router = Router();
+
+// Importar los routers
+const videogameRouter = require('./routes/videogameRouter');
+const genreRouter = require('./routes/genreRouter');
+
+// Configurar los routers
+router.use('/videogames', videogameRouter);
+router.use('/genres', genreRouter);
+
 // Se usará apiKey en el código para hacer solicitudes a la API
 const apiKey = process.env.REACT_APP_API_KEY;
-
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
   server.listen(3001, () => {
-    console.log('Server listening at http://localhost:3001/'); 
+    console.log('Server listening at http://localhost:3001/');
   });
 });

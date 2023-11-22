@@ -214,7 +214,7 @@ Se debe desarrollar una aplicación utilizando **React** y **Redux** que conteng
 -  Nombre.
 -  Imagen.
 -  Plataformas.
--  Descripción.
+-  Descripción.-
 -  Fecha de lanzamiento.
 -  Rating.
 -  Géneros.

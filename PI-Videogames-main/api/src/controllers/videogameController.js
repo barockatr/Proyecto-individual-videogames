@@ -1,7 +1,7 @@
 // En tu archivo routes/videogameRoutes.js
 
 const express = require('express');
-const { createVideogame } = require('../controllers/videogameController');
+const { createVideogame } = require('./videogameController');
 
 const router = express.Router();
 
