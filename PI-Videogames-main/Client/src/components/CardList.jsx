@@ -5,19 +5,20 @@ const CardList = () => {
 
   useEffect(() => {
     // Lógica para obtener los datos de las cards aleatorias
-    // Puedes utilizar una API o un arreglo de datos estáticos
+    const fetchData = async () => {
+      try {
+        // Realizar la llamada a la API para obtener los datos de las tarjetas
+        const response = await fetch('https://api.rawg.io/api/games');
+        const data = await response.json();
 
-    // Ejemplo de datos estáticos
-    const data = [
-      { id: 1, title: 'Card 1', description: 'Descripción de la Card 1' },
-      { id: 2, title: 'Card 2', description: 'Descripción de la Card 2' },
-      { id: 3, title: 'Card 3', description: 'Descripción de la Card 3' },
-    ];
+        // Actualizar el estado de las tarjetas con los datos obtenidos
+        setCards(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
 
-    // Simulamos una llamada asíncrona con un timeout
-    setTimeout(() => {
-      setCards(data);
-    }, 2000);
+    fetchData();
   }, []);
 
   return (

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchVideoGames, filterByGenre, orderBy, setPage } from '../../api/src/controllers/videogameController';
+import { fetchVideoGames, filterByGenre, orderBy, setPage } from '/workspaces/Proyecto-individual-videogames/PI-Videogames-main/api/src/controllers/videogameController.js'
 import { Link } from 'react-router-dom';
 
 const HomePage = () => {

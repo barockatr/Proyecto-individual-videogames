@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import LandingPage from './LandingPage';   
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import LandingPage from './LandingPage';  
 import FormPage from './FormPage';
-import DetailPage from './DetailPage';
-import HomePage from './HomePage';
+import DetailPage from '../components/DetailPage';
+import HomePage from '../components/HomePage';
 
    const RouterComponent = () => {
      return (

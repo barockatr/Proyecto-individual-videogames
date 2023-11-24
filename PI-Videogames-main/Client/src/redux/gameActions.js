@@ -5,7 +5,7 @@ export const fetchGameDetail = (gameId) => {
     try {
       // Realiza una llamada a la API para obtener los detalles del videojuego con el ID proporcionado
       const response = await api.get(`/games/${gameId}`);
-      const gameDetail = response.data; // Asegúrate de ajustar esto según la estructura de tu API de videojuegos
+      const gameDetail = response.data; 
 
       // Despacha la acción para actualizar el estado con los detalles del videojuego
       dispatch({ type: 'FETCH_GAME_DETAIL_SUCCESS', payload: gameDetail });

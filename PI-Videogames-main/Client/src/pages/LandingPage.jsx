@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
-import CardList from './CardList';
+import CardList from '../components/CardList';
 
 const LandingPage = () => {
   const [authenticated, setAuthenticated] = useState(false);

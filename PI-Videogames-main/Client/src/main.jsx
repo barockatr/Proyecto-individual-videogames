@@ -1,10 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import RouterComponent from './pages/router';
+import App from './App';
+import styles from '/workspaces/Proyecto-individual-videogames/PI-Videogames-main/Client/src/main.jsx';
 
 ReactDOM.render(
-    <React.StrictMode>
-      <RouterComponent />
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+);
